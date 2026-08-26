@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eee;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  background: #f44336; /* red background */
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.shoe {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+}
+
+.details {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  right: 20px;
+}
+
+.details h4 {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.details h2 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.rating {
+  margin: 8px 0;
+  font-size: 16px;
+  color: gold; /* yellow stars */
+}
+
+.rating span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price span {
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-left: 8px;
+  color: #ddd;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
