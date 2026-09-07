@@ -1,0 +1,150 @@
+/* Removes the browser's default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox helps keep the footer at the bottom */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8ff;
+    color: #1c2b40;
+}
+
+/* Fixed header remains visible while scrolling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 5%;
+    background-color: #102a43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav a {
+    margin-left: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #64d8ff;
+}
+
+/* Extra top spacing prevents the fixed header from covering content */
+main {
+    flex: 1;
+    padding-top: 70px;
+}
+
+.profile-section {
+    min-height: 80vh;
+    padding: 8vh 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.introduction {
+    width: 55%;
+}
+
+.introduction h2 {
+    margin-bottom: 0.7em;
+    color: #0066cc;
+    font-size: 2.5rem;
+}
+
+.introduction p {
+    margin-bottom: 2em;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.profile-image img {
+    width: 280px;
+    height: 280px;
+    border: 6px solid #0066cc;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.button {
+    padding: 0.8em 1.5em;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #004d99;
+}
+
+.information-section {
+    margin: 2rem 8%;
+    padding: 3rem;
+    background-color: white;
+    border-left: 6px solid #0066cc;
+    border-radius: 8px;
+}
+
+.information-section h2 {
+    margin-bottom: 1rem;
+    color: #0066cc;
+}
+
+/* Footer stays at the bottom because body uses flexbox */
+footer {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+}
+
+/* Adjusts the layout for smaller screens */
+@media (max-width: 700px) {
+    header {
+        padding: 0 4%;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        margin-left: 0.5em;
+        font-size: 0.9rem;
+    }
+
+    .profile-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .introduction {
+        width: 100%;
+    }
+
+    .profile-image img {
+        width: 220px;
+        height: 220px;
+    }
+}

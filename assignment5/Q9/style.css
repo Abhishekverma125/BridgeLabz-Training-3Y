@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    background-color: #ded8c9;
+    color: #222222;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fffdf5;
+    border-top: 6px double #222222;
+    border-bottom: 6px double #222222;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.newspaper {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 45px;
+    background-color: #fffdf5;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Creates three vertical newspaper columns */
+.news-article {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid #999999;
+}
+
+/* Makes the main heading span across every column */
+.news-article h2 {
+    column-span: all;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid #222222;
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.news-article h3 {
+    margin: 20px 0 12px;
+    font-size: 24px;
+    break-after: avoid;
+}
+
+.news-article p {
+    margin-bottom: 18px;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Floats the image to the left of the text */
+.article-image {
+    width: 180px;
+    height: 130px;
+    margin: 5px 16px 8px 0;
+    border: 3px solid #333333;
+    object-fit: cover;
+    float: left;
+}
+
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+}
+
+/* Two columns for medium-size screens */
+@media (max-width: 850px) {
+    .news-article {
+        column-count: 2;
+    }
+}
+
+/* One column for mobile screens */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .newspaper {
+        padding: 25px;
+    }
+
+    .news-article {
+        column-count: 1;
+    }
+
+    .news-article h2 {
+        font-size: 28px;
+    }
+
+    .article-image {
+        width: 100%;
+        height: 220px;
+        margin: 0 0 18px;
+        float: none;
+    }
+}

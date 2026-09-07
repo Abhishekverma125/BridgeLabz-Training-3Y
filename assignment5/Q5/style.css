@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #263238;
+}
+
+header {
+    padding: 45px 20px;
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* Flexbox creates three equal columns */
+.pricing-container {
+    min-height: 70vh;
+    padding: 60px 5%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pricing-card {
+    position: relative;
+    width: 30%;
+    max-width: 340px;
+    min-height: 430px;
+    padding: 35px 30px;
+    background-color: white;
+    border: 2px solid #b8c4ce;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+
+    /* Flexbox keeps the buttons aligned at the bottom */
+    display: flex;
+    flex-direction: column;
+
+    /* Creates a smooth hover animation */
+    transition: transform 0.3s, background-color 0.3s,
+                box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+    background-color: #e8f4ff;
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card h2 {
+    margin-bottom: 20px;
+    color: #14213d;
+    font-size: 28px;
+}
+
+.price {
+    margin-bottom: 25px;
+    color: #0077b6;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #607d8b;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.pricing-card ul {
+    margin-bottom: 30px;
+    text-align: left;
+    list-style: none;
+}
+
+.pricing-card li {
+    padding: 12px 5px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.pricing-card li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.plan-button {
+    margin-top: auto;
+    padding: 13px 20px;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+    background-color: #023e8a;
+}
+
+/* Different border and background highlight Standard plan */
+.popular {
+    background-color: #fff9df;
+    border: 4px double #f4a261;
+}
+
+.popular-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    padding: 7px 18px;
+    background-color: #f4a261;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateX(-50%);
+}
+
+footer {
+    padding: 20px;
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+}
+
+/* Converts the pricing table into one column */
+@media (max-width: 700px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 90%;
+    }
+}

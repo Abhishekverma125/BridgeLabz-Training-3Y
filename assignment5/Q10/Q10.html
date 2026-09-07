@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home">
+
+    <header class="main-header">
+        <h1>TechVision</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to TechVision</h2>
+
+                <p>
+                    We create modern, responsive and user-friendly websites.
+                </p>
+
+                <a href="#services" class="primary-button">
+                    Explore Services
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-text">
+                <h2>About Us</h2>
+
+                <p>
+                    TechVision is a creative technology company focused on
+                    designing useful and accessible digital solutions. Our
+                    goal is to help people and organizations build a strong
+                    online presence.
+                </p>
+
+                <p>
+                    We combine creativity with modern technology to produce
+                    clean, responsive, and visually attractive websites.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="about.jpg" alt="Technology workspace">
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+
+            <div class="service-container">
+                <article class="service-box">
+                    <span>01</span>
+                    <h3>Web Design</h3>
+                    <p>
+                        We create clean and attractive webpage designs.
+                    </p>
+                </article>
+
+                <article class="service-box">
+                    <span>02</span>
+                    <h3>Web Development</h3>
+                    <p>
+                        We develop fast and responsive websites.
+                    </p>
+                </article>
+
+                <article class="service-box">
+                    <span>03</span>
+                    <h3>UI Design</h3>
+                    <p>
+                        We design simple and user-friendly interfaces.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-heading">
+                <h2>Contact Us</h2>
+                <p>Send us a message using the form below.</p>
+            </div>
+
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message"
+                    required
+                ></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechVision. All rights reserved.</p>
+    </footer>
+
+    <!-- Fixed button stays at the bottom-right of the screen -->
+    <a href="#home" class="top-button" aria-label="Return to top">↑</a>
+
+</body>
+</html>

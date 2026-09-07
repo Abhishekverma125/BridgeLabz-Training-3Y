@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #263238;
+}
+
+/* Fixed header stays at the top while scrolling */
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 75px;
+    padding: 0 35px;
+    background-color: #172554;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header h1 {
+    font-size: 26px;
+}
+
+.dashboard-layout {
+    display: flex;
+    padding-top: 75px;
+}
+
+/* Sidebar fills the remaining screen height */
+.sidebar {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 75px);
+    padding: 30px 20px;
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    padding: 13px 15px;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover {
+    background-color: #3b82f6;
+}
+
+.main-content {
+    width: calc(100% - 240px);
+    min-height: calc(100vh - 75px);
+    margin-left: 240px;
+    padding: 40px;
+}
+
+.main-content > h2 {
+    margin-bottom: 30px;
+    color: #172554;
+    font-size: 30px;
+}
+
+/* Flexbox arranges the content boxes evenly */
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.content-box {
+    flex: 1 1 40%;
+    min-height: 190px;
+    padding: 30px;
+    background-color: white;
+    border-left: 6px solid #2563eb;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.content-box h3 {
+    margin-bottom: 18px;
+    color: #1e3a8a;
+    font-size: 21px;
+}
+
+.content-box .number {
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* On smaller screens, the sidebar stacks above the content */
+@media (max-width: 700px) {
+    .top-header {
+        height: auto;
+        min-height: 75px;
+        padding: 15px 20px;
+    }
+
+    .top-header h1 {
+        font-size: 21px;
+    }
+
+    .dashboard-layout {
+        padding-top: 75px;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav a {
+        background-color: #2449a4;
+    }
+
+    .main-content {
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    .content-grid {
+        flex-direction: column;
+    }
+
+    .content-box {
+        width: 100%;
+    }
+}

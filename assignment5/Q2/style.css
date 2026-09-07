@@ -1,0 +1,159 @@
+/* Removes the default spacing from every element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #212121;
+    background-color: #fff8e7;
+}
+
+header {
+    padding: 40px 20px;
+    background-color: #7b1e1e;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #ffc857;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav {
+    padding: 18px;
+    background-color: #3d0c11;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffc857;
+}
+
+/* General styling for every main section */
+main section {
+    width: 100%;
+    min-height: 350px;
+    padding: 80px 10%;
+    border-bottom: 4px solid white;
+}
+
+main section h2 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+main section p {
+    max-width: 900px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* This section uses a linear gradient */
+.hero-section {
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #7b1e1e,
+        #d35400,
+        #f39c12
+    );
+}
+
+/* A simple full-width background color */
+.history-section {
+    background-color: #ffe5b4;
+    color: #4a1c1c;
+}
+
+/* This section uses a radial gradient */
+.places-section {
+    background: radial-gradient(
+        circle,
+        #ffffff,
+        #ffd9a0,
+        #e49b54
+    );
+}
+
+.place-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 280px;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: white;
+    border: 3px solid #7b1e1e;
+    border-radius: 10px;
+}
+
+article h3 {
+    margin-bottom: 15px;
+    color: #7b1e1e;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+article p {
+    font-size: 16px;
+}
+
+.food-section {
+    background-color: #fff1cc;
+    color: #3d0c11;
+}
+
+footer {
+    padding: 25px;
+    background-color: #3d0c11;
+    color: white;
+    text-align: center;
+}
+
+/* Makes navigation and content suitable for small screens */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px;
+    }
+
+    main section {
+        padding: 50px 7%;
+    }
+
+    main section h2 {
+        font-size: 29px;
+    }
+}
