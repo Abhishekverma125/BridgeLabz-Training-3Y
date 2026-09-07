@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* Header */
+header {
+    padding: 22px;
+    background-color: #1e3a8a;
+}
+
+/* Navigation links spaced evenly */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Main section */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px;
+}
+
+/* Three boxes */
+.box {
+    width: 300px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.box h2 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.box p {
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Required rotation on hover */
+.box:hover {
+    transform: rotate(2deg);
+}
+
+/* Footer stays at the bottom */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 750px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 400px;
+    }
+}

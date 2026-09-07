@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: #1e293b;
+}
+
+/* Loader container using Flexbox */
+.loader {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Three circles */
+.circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    animation-name: moveUpDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Different animation delay for every circle */
+.circle-one {
+    animation-delay: 0s;
+}
+
+.circle-two {
+    animation-delay: 0.2s;
+}
+
+.circle-three {
+    animation-delay: 0.4s;
+}
+
+/* Movement animation */
+@keyframes moveUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+main p {
+    margin-top: 20px;
+    color: #64748b;
+}

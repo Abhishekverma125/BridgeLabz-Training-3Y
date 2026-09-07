@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Header using Flexbox */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 7%;
+    background-color: #172554;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Main area using a two-column Grid */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    padding: 40px 7%;
+}
+
+article {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+article h1 {
+    margin-bottom: 15px;
+    color: #1e3a8a;
+    font-size: 36px;
+
+    /* Apply animation to the title */
+    animation: moveUp 1s ease;
+}
+
+.introduction {
+    margin-bottom: 30px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Three boxes aligned using Flexbox */
+.box-container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    flex: 1;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #dbeafe;
+    text-align: center;
+}
+
+.box h2 {
+    margin-bottom: 12px;
+    color: #1e40af;
+}
+
+.box p {
+    line-height: 1.5;
+}
+
+/* Sidebar */
+aside {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #e0e7ff;
+}
+
+aside h2 {
+    margin-bottom: 20px;
+    color: #312e81;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin-bottom: 15px;
+}
+
+aside a {
+    color: #334155;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: #2563eb;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #172554;
+    color: white;
+    text-align: center;
+}
+
+/* Title animation */
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive layout */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+    }
+
+    .box-container {
+        flex-direction: column;
+    }
+
+    article h1 {
+        font-size: 30px;
+    }
+}

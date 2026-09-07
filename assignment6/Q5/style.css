@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    padding: 40px 20px;
+    background-color: #312e81;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Pricing cards container */
+.pricing-container {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 30px;
+}
+
+/* Individual pricing card */
+.pricing-card {
+    position: relative;
+    width: 300px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+    /* Fade-in animation */
+    animation: fadeIn 1s ease;
+
+    /* Smooth hover transition */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 28px rgba(0, 0, 0, 0.25);
+}
+
+.pricing-card h2 {
+    margin-bottom: 15px;
+    color: #312e81;
+    font-size: 27px;
+}
+
+.price {
+    margin-bottom: 25px;
+    color: #2563eb;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.pricing-card ul {
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.pricing-card li {
+    margin: 13px 0;
+    color: #475569;
+}
+
+/* Highlighted middle card */
+.popular {
+    min-height: 440px;
+    transform: scale(1.08);
+    background-color: #e0e7ff;
+    border: 3px solid #4f46e5;
+}
+
+.popular:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 8px 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: #4f46e5;
+    color: white;
+    transform: translateX(-50%);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    background-color: #4f46e5;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #3730a3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stack cards vertically below 750px */
+@media (max-width: 750px) {
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .popular {
+        transform: scale(1);
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+}

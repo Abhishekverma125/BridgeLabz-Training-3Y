@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1f2937;
+}
+
+header {
+    padding: 35px 20px;
+    background-color: #0f766e;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Four-column grid for desktop */
+.product-grid {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.product-card {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    /* Required transition */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Required hover effect */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-icon {
+    margin-bottom: 18px;
+    font-size: 60px;
+}
+
+.product-card h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.product-card p {
+    color: #0f766e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Two columns for tablets */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* One column for mobile devices */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

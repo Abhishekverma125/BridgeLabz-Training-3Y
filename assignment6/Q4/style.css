@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* Main dashboard grid */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+/* Header spans all columns */
+header {
+    grid-area: header;
+    padding: 22px;
+    background-color: #172554;
+    color: white;
+    text-align: center;
+}
+
+/* Left sidebar */
+aside {
+    grid-area: sidebar;
+    padding: 25px;
+    background-color: #1e293b;
+    color: white;
+}
+
+aside h2 {
+    margin-bottom: 25px;
+}
+
+/* Vertical navigation */
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside nav a {
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: #334155;
+}
+
+aside nav a:hover {
+    background-color: #2563eb;
+}
+
+/* Main content grid */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    padding: 30px;
+}
+
+/* Dashboard cards */
+.card {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* This box spans two columns */
+.large-card {
+    grid-column: span 2;
+}
+
+/* Footer spans all columns */
+footer {
+    grid-area: footer;
+    padding: 18px;
+    background-color: #172554;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    aside {
+        text-align: center;
+    }
+
+    aside nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .large-card {
+        grid-column: span 1;
+    }
+}
