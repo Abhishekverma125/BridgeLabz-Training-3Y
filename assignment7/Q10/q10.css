@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+}
+
+header {
+    background-color: #243b53;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* Arranges the five navigation links horizontally. */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    border: 1px solid #a7b9ca;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Gives the current page link a distinct colour. */
+nav a.active {
+    background-color: #ffe09a;
+    color: #222;
+    border-color: #ffe09a;
+}
+
+/* Smoothly changes the appearance on hover. */
+nav a:hover {
+    background-color: white;
+    color: #243b53;
+    transform: translateY(-3px);
+}
+
+nav a:focus-visible {
+    outline: 3px solid #ffe09a;
+    outline-offset: 3px;
+}
+
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 20px;
+    background-color: #243b53;
+    color: white;
+    text-align: center;
+}
+
+/* Stacks the navigation links on screens below 700px. */
+@media (max-width: 699px) {
+    nav ul {
+        flex-direction: column;
+    }
+}

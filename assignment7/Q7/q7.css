@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f6;
+    color: #222;
+}
+
+header,
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* Uses a different font for the article headings. */
+h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #244c70;
+}
+
+article p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+/* Highlights the first letter of the introduction. */
+.intro::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #843c16;
+}
+
+/* Styles the first displayed line of the introduction. */
+.intro::first-line {
+    font-weight: bold;
+    color: #244c70;
+}
+
+mark {
+    background-color: #ffea99;
+    color: #493400;
+    padding: 2px 4px;
+}
+
+strong {
+    color: #185b35;
+}
+
+em {
+    color: #713b83;
+}
+
+article .note {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    background-color: #eaf1f7;
+    padding: 15px;
+}
+
+footer {
+    font-size: 14px;
+}

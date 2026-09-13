@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Arranges the examples horizontally using Flexbox. */
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    overflow-x: auto;
+}
+
+figure {
+    flex: 1;
+    min-width: 170px;
+    margin: 0;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+
+    /* Makes each transformation happen smoothly. */
+    transition: all 0.4s ease;
+}
+
+.rotate {
+    background-color: lightblue;
+}
+
+.scale {
+    background-color: lightgreen;
+}
+
+.translate {
+    background-color: peachpuff;
+}
+
+.skew {
+    background-color: plum;
+}
+
+/* Turns the box clockwise. */
+.rotate:hover {
+    transform: rotate(15deg);
+}
+
+/* Increases the size of the box. */
+.scale:hover {
+    transform: scale(1.2);
+}
+
+/* Moves the box right and upwards. */
+.translate:hover {
+    transform: translate(20px, -15px);
+}
+
+/* Slants the box horizontally. */
+.skew:hover {
+    transform: skewX(15deg);
+}
+
+figcaption {
+    margin-top: 35px;
+    font-size: 15px;
+    line-height: 1.5;
+}

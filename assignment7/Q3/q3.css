@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Keeps the header and footer visible while scrolling. */
+header,
+footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    text-align: center;
+    z-index: 1;
+}
+
+header {
+    top: 0;
+    height: 80px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 25px 10px;
+    font-size: 24px;
+}
+
+footer {
+    bottom: 0;
+    height: 50px;
+}
+
+/* Leaves space for the fixed header and footer. */
+main {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colours change from left to right. */
+.linear {
+    background-image: linear-gradient(to right, #143d59, #285943);
+
+    /* Produces a parallax-like effect when scrolling. */
+    background-attachment: fixed;
+}
+
+/* Colours change from the centre towards the edges. */
+.radial {
+    background-image: radial-gradient(circle, #713582, #202050);
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+}

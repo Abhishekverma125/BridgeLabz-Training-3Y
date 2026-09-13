@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+}
+
+header,
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adds a small shadow behind the headings. */
+h1,
+h2 {
+    text-shadow: 2px 2px 3px #bbb;
+}
+
+/* Keeps the cards in a single row.
+   Small screens can scroll horizontally. */
+.cards {
+    display: flex;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    overflow-x: auto;
+}
+
+.card {
+    flex: 1;
+    min-width: 180px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Each card has a different shadow style. */
+.card1 {
+    box-shadow: 3px 3px 6px #aaa;
+}
+
+.card2 {
+    box-shadow: 0 6px 15px #aaa;
+}
+
+.card3 {
+    box-shadow: 6px 6px 0 #b5c8dc;
+}
+
+/* Moves the card upwards and makes its shadow larger. */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}

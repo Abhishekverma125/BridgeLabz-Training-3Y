@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Box Model</h1>
+        <p>Content, padding, border and margin</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Parts of the Box Model</h2>
+
+            <div class="model-container">
+                <div class="margin-area">
+                    <div class="model-box">
+                        <div class="content">Content</div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="description">
+                <li><strong>Blue — Content:</strong> Text or images inside the box.</li>
+                <li><strong>Green — Padding:</strong> Space around the content.</li>
+                <li><strong>Brown — Border:</strong> The edge around the padding.</li>
+                <li><strong>Orange — Margin:</strong> Space outside the border.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Comparing Box Sizes</h2>
+            <p class="explanation">
+                Both boxes have width: 240px, padding: 20px
+                and border: 5px.
+            </p>
+
+            <div class="comparison">
+                <article>
+                    <h3>Default: content-box</h3>
+                    <div class="size-box default-box">
+                        Padding and border are added to the width.
+                    </div>
+                    <p>Total width: 240 + 40 + 10 = 290px</p>
+                </article>
+
+                <article>
+                    <h3>border-box</h3>
+                    <div class="size-box border-box">
+                        Padding and border fit inside the width.
+                    </div>
+                    <p>Total width: 240px</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Assignment 7 | Box Model Practice</p>
+    </footer>
+</body>
+</html>

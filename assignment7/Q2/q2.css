@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Centres the boxes horizontally and vertically. */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 65vh;
+    padding: 20px;
+}
+
+.box {
+    padding: 15px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.box h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.box1 {
+    width: 200px;
+    height: 180px;
+    background-color: lightblue;
+}
+
+.box2 {
+    width: 30%;
+    height: 30vh;
+
+    /* Limits how short and wide this box can be. */
+    min-height: 220px;
+    max-width: 300px;
+    background-color: lightgreen;
+}
+
+.box3 {
+    width: 16em;
+    height: 15em;
+    background-color: peachpuff;
+
+    /* Shows a scrollbar when the content cannot fit. */
+    overflow: auto;
+}

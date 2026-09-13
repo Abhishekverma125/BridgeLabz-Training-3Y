@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2,
+.explanation {
+    text-align: center;
+}
+
+/* Centres the box model demonstration. */
+.model-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Margin is transparent, so the wrapper shows its area. */
+.margin-area {
+    display: flex;
+    background-color: #ffd09b;
+    outline: 2px dashed #82501c;
+}
+
+.model-box {
+    margin: 30px;
+    border: 10px solid #82501c;
+    padding: 25px;
+    background-color: #bce5b5;
+}
+
+.content {
+    padding: 20px;
+    background-color: #b5ddf5;
+    outline: 1px dashed #244c70;
+    text-align: center;
+}
+
+.description {
+    max-width: 550px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+/* Centres the comparison boxes using Flexbox. */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.comparison article {
+    text-align: center;
+}
+
+.size-box {
+    width: 240px;
+    padding: 20px;
+    border: 5px solid #244c70;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* This is the default sizing behaviour. */
+.default-box {
+    box-sizing: content-box;
+    background-color: #ffe0b5;
+}
+
+/* Includes padding and border in the declared width. */
+.border-box {
+    box-sizing: border-box;
+    background-color: #c7e7ff;
+}
